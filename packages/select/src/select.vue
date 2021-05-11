@@ -271,7 +271,10 @@
       size: String,
       disabled: Boolean,
       clearable: Boolean,
-      filterable: Boolean,
+      filterable: {
+        type: Boolean,
+        default: true
+      },
       allowCreate: Boolean,
       loading: Boolean,
       popperClass: String,
