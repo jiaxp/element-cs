@@ -1,7 +1,7 @@
 {
-  "name": "element-ui",
-  "version": "2.13.2",
-  "description": "A Component Library for Vue.js.",
+  "name": "element-ui-cs",
+  "version": "1.0.0",
+  "description": "基于element-ui@2.13.2定制开发的版本",
   "main": "lib/element-ui.common.js",
   "files": [
     "lib",
