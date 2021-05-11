@@ -24,7 +24,7 @@
         :tabindex="tabindex"
         v-if="type !== 'textarea'"
         class="el-input__inner"
-        v-bind="$attrs"
+        v-bind="textAttrs"
         :type="showPassword ? (passwordVisible ? 'text': 'password') : type"
         :disabled="inputDisabled"
         :readonly="readonly"
@@ -93,7 +93,7 @@
       @compositionend="handleCompositionEnd"
       @input="handleInput"
       ref="textarea"
-      v-bind="$attrs"
+      v-bind="textareaAttrs"
       :disabled="inputDisabled"
       :readonly="readonly"
       :autocomplete="autoComplete || autocomplete"
@@ -193,6 +193,20 @@
     },
 
     computed: {
+      textAttrs() {
+        let attrs = Object.assign({}, this.$attrs);
+        if (attrs.maxlength === undefined) {
+          attrs.maxlength = '20';
+        }
+        return attrs;
+      },
+      textareaAttrs() {
+        let attrs = Object.assign({}, this.$attrs);
+        if (attrs.maxlength === undefined) {
+          attrs.maxlength = '200';
+        }
+        return attrs;
+      },
       _elFormItemSize() {
         return (this.elFormItem || {}).elFormItemSize;
       },

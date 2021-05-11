@@ -305,7 +305,10 @@
 
       defaultSort: Object,
 
-      tooltipEffect: String,
+      tooltipEffect: {
+        type: String,
+        default: 'light'
+      },
 
       spanMethod: Function,
 
