@@ -196,7 +196,7 @@
       textAttrs() {
         let attrs = Object.assign({}, this.$attrs);
         if (attrs.maxlength === undefined) {
-          attrs.maxlength = '20';
+          attrs.maxlength = '30';
         }
         return attrs;
       },

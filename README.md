@@ -39,3 +39,9 @@ Vue.component(Button.name, Button)
 三.Select
 1.filterable默认值改为true
 ```
+
+#### v1.0.2
+```Optimization
+一.Input
+1.type=text maxlength默认值=30
+```
